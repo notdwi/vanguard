@@ -1,0 +1,136 @@
+.canvas {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  background-image: radial-gradient(var(--line-faint) 1px, transparent 1px);
+  background-size: 22px 22px;
+  cursor: grab;
+}
+
+.canvasDragging {
+  cursor: grabbing;
+}
+
+.stage {
+  transform-origin: 0 0;
+}
+
+.edge {
+  fill: none;
+  stroke: var(--line-strong);
+  stroke-width: 1.25;
+}
+
+.edgeStrong {
+  stroke: var(--fg-subtle);
+}
+
+.edgeLabel {
+  fill: var(--fg-subtle);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  text-anchor: middle;
+  paint-order: stroke;
+  stroke: var(--bg);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+.node {
+  cursor: pointer;
+}
+
+.nodeBox {
+  fill: var(--bg-raised);
+  stroke: var(--line-strong);
+  stroke-width: 1;
+  rx: 4;
+}
+
+.node:hover .nodeBox {
+  stroke: var(--fg);
+}
+
+.nodeBoxHigh {
+  stroke: var(--fg);
+  stroke-width: 1.5;
+}
+
+.nodeMethod {
+  fill: var(--fg);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.nodeLabel {
+  fill: var(--fg);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.nodeHost {
+  fill: var(--fg-subtle);
+  font-family: var(--font-sans);
+  font-size: 9px;
+}
+
+.nodeCount {
+  fill: var(--fg-subtle);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  text-anchor: end;
+}
+
+.controls {
+  position: absolute;
+  right: var(--space-6);
+  bottom: var(--space-6);
+  display: flex;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--bg-raised);
+  box-shadow: var(--shadow-pop);
+}
+
+.legend {
+  position: absolute;
+  left: var(--space-6);
+  bottom: var(--space-6);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  max-width: 60%;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--bg-raised);
+  font-size: var(--text-2xs);
+  color: var(--fg-muted);
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.legendDash {
+  width: 14px;
+  height: 1px;
+  background: var(--fg-subtle);
+}
+
+.zoomLabel {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 var(--space-3);
+  color: var(--fg-subtle);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+}

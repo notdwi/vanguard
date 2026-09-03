@@ -1,0 +1,250 @@
+.split {
+  display: grid;
+  grid-template-columns: var(--left, 1fr) 1px var(--right, 1fr);
+  min-height: 0;
+  height: 100%;
+}
+
+.divider {
+  background: var(--line);
+  cursor: col-resize;
+  transition: background var(--speed);
+}
+
+.divider:hover,
+.dividerActive {
+  background: var(--fg-subtle);
+}
+
+.pane {
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  min-height: 42px;
+  padding: var(--space-4) var(--space-7);
+  border-bottom: 1px solid var(--line);
+  flex: none;
+}
+
+.pageTitle {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.pageSubtitle {
+  color: var(--fg-subtle);
+  font-size: var(--text-sm);
+}
+
+.pageSpacer {
+  flex: 1;
+}
+
+.pageBody {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: var(--space-7);
+}
+
+.narrow {
+  max-width: 760px;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--bg-raised);
+  margin-bottom: var(--space-6);
+  overflow: hidden;
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-6);
+  border-bottom: 1px solid var(--line-faint);
+}
+
+.cardTitle {
+  font-size: var(--text-md);
+  font-weight: 600;
+}
+
+.cardBody {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.cardNote {
+  color: var(--fg-muted);
+  font-size: var(--text-sm);
+  line-height: 1.65;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-6);
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: var(--space-7);
+}
+
+.stat {
+  padding: var(--space-5) var(--space-6);
+  background: var(--bg-raised);
+}
+
+.statValue {
+  font-family: var(--font-mono);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.statLabel {
+  margin-top: var(--space-1);
+  color: var(--fg-subtle);
+  font-size: var(--text-xs);
+}
+
+.tableWrap {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.dataTable thead th {
+  position: sticky;
+  top: 0;
+  padding: var(--space-4) var(--space-5);
+  background: var(--bg-sunken);
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  font-size: var(--text-2xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--fg-muted);
+  z-index: 1;
+}
+
+.dataTable tbody td {
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--line-faint);
+  vertical-align: middle;
+}
+
+.dataTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.dataTable tbody tr:hover {
+  background: var(--bg-hover);
+}
+
+.clickableRow {
+  cursor: pointer;
+}
+
+.numeric {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.monoCell {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  word-break: break-all;
+}
+
+.sectionTitle {
+  margin-bottom: var(--space-4);
+  font-size: var(--text-2xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--fg-muted);
+}
+
+.note {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--fg);
+  border-radius: var(--radius-sm);
+  background: var(--bg-sunken);
+  color: var(--fg-muted);
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.tagRemovable {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 22px;
+  padding: 0 var(--space-2) 0 var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--bg-sunken);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+.inlineForm {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+}

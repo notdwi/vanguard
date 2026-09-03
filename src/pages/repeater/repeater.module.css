@@ -1,0 +1,344 @@
+.layout {
+  display: grid;
+  grid-template-columns: 220px 1px 1fr;
+  min-height: 0;
+  height: 100%;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  border-right: 1px solid var(--line);
+  background: var(--bg-sunken);
+}
+
+.sidebarHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  height: 34px;
+  padding: 0 var(--space-3) 0 var(--space-5);
+  border-bottom: 1px solid var(--line);
+  flex: none;
+}
+
+.sidebarTitle {
+  flex: 1;
+  font-size: var(--text-2xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--fg-muted);
+}
+
+.draftList {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: var(--space-2);
+}
+
+.draftItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  width: 100%;
+  padding: var(--space-4);
+  border-radius: var(--radius-sm);
+  text-align: left;
+  transition: background var(--speed);
+}
+
+.draftItem:hover {
+  background: var(--bg-hover);
+}
+
+.draftItemActive,
+.draftItemActive:hover {
+  background: var(--bg-active);
+}
+
+.draftLabel {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.draftMeta {
+  color: var(--fg-subtle);
+  font-size: var(--text-2xs);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-width: 0;
+  min-height: 0;
+}
+
+.urlBar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--line);
+  flex: none;
+}
+
+.methodSelect {
+  width: 96px;
+  flex: none;
+}
+
+.urlInput {
+  flex: 1;
+  font-family: var(--font-mono);
+}
+
+.panes {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  min-height: 0;
+}
+
+.pane {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+
+.paneDivider {
+  background: var(--line);
+}
+
+.paneBody {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: var(--space-5) var(--space-6);
+}
+
+.paneFlush {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  margin-bottom: var(--space-6);
+}
+
+.sectionHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--line-faint);
+}
+
+.sectionTitle {
+  font-size: var(--text-2xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--fg-muted);
+}
+
+.spacer {
+  flex: 1;
+}
+
+.pairRow {
+  display: grid;
+  grid-template-columns: 180px 1fr 24px;
+  gap: var(--space-3);
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+
+.runBar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid var(--line);
+  background: var(--bg-sunken);
+  flex: none;
+  flex-wrap: wrap;
+}
+
+.runField {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-xs);
+  color: var(--fg-muted);
+}
+
+.numberInput {
+  width: 62px;
+  text-align: right;
+  font-family: var(--font-mono);
+}
+
+.progress {
+  flex: 1;
+  min-width: 90px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--line);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--fg);
+  transition: width 120ms linear;
+}
+
+.responseHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  height: 32px;
+  padding: 0 var(--space-4) 0 var(--space-6);
+  border-bottom: 1px solid var(--line);
+  flex: none;
+}
+
+.statusText {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.responseMeta {
+  color: var(--fg-subtle);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+.historyList {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--line);
+  max-height: 190px;
+  overflow: auto;
+  flex: none;
+}
+
+.historyRow {
+  display: grid;
+  grid-template-columns: 68px 56px 66px 1fr auto;
+  gap: var(--space-4);
+  align-items: center;
+  padding: var(--space-3) var(--space-5);
+  border-bottom: 1px solid var(--line-faint);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-align: left;
+  cursor: pointer;
+}
+
+.historyRow:hover {
+  background: var(--bg-hover);
+}
+
+.historyRowActive,
+.historyRowActive:hover {
+  background: var(--bg-active);
+}
+
+.historyIndex {
+  color: var(--fg-subtle);
+  font-variant-numeric: tabular-nums;
+}
+
+.historyError {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.warnNote {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-left: 2px solid var(--fg);
+  background: var(--bg-sunken);
+  color: var(--fg-muted);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  margin-bottom: var(--space-4);
+}
+
+.compareGrid {
+  display: grid;
+  grid-template-columns: 130px 1fr 1fr;
+  gap: var(--space-3) var(--space-5);
+  align-items: baseline;
+  margin-bottom: var(--space-7);
+  font-size: var(--text-sm);
+}
+
+.compareLabel {
+  color: var(--fg-muted);
+  font-size: var(--text-xs);
+}
+
+.compareValue {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  word-break: break-word;
+}
+
+.diffRow {
+  display: grid;
+  grid-template-columns: 74px minmax(140px, 1fr) 1fr 1fr;
+  gap: var(--space-4);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--line-faint);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  align-items: baseline;
+}
+
+.diffKind {
+  font-size: var(--text-2xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--fg-muted);
+}
+
+.diffKindAdded {
+  color: var(--fg);
+  font-weight: 700;
+}
+
+.diffKindRemoved {
+  color: var(--fg-subtle);
+  text-decoration: line-through;
+}
+
+.diffPath {
+  word-break: break-all;
+}
+
+.diffVolatile {
+  opacity: 0.55;
+}
+
+.diffValue {
+  word-break: break-all;
+  color: var(--fg-muted);
+}

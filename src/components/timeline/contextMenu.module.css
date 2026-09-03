@@ -1,0 +1,38 @@
+.menu {
+  position: fixed;
+  z-index: 70;
+  min-width: 190px;
+  padding: var(--space-2);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  background: var(--bg-raised);
+  box-shadow: var(--shadow-pop);
+  animation: pop 90ms ease-out;
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}
+
+.item {
+  display: block;
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  text-align: left;
+  font-size: var(--text-sm);
+  color: var(--fg);
+}
+
+.item:hover {
+  background: var(--bg-hover);
+}
+
+.separator {
+  height: 1px;
+  margin: var(--space-2) var(--space-3);
+  background: var(--line);
+}

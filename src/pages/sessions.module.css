@@ -1,0 +1,75 @@
+.createRow {
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+  max-width: 520px;
+  margin-bottom: var(--space-8);
+}
+
+.group {
+  margin-bottom: var(--space-8);
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-5) var(--space-4) var(--space-5) var(--space-6);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--bg-raised);
+  margin-bottom: var(--space-3);
+  transition: border-color var(--speed), background var(--speed);
+}
+
+.card:hover {
+  border-color: var(--line-strong);
+}
+
+.cardActive {
+  border-color: var(--fg);
+}
+
+.cardMain {
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.cardTitleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+.cardName {
+  font-size: var(--text-md);
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  color: var(--fg-subtle);
+  font-size: var(--text-xs);
+}
+
+.domains {
+  font-family: var(--font-mono);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 380px;
+}
+
+.cardActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex: none;
+}
